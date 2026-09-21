@@ -1,0 +1,759 @@
+/* ===================================================
+   StudentReviewApp - Full Stylesheet
+   Includes: navbar, hero, login, dashboards, tables,
+   stats cards, search bar, notifications, file upload,
+   deadline badges, responsive design
+   =================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.5;
+}
+
+/* ─── NAVBAR ─── */
+.navbar {
+    background: #1e293b;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.btn-nav-login {
+    background: #3b82f6;
+    padding: 8px 18px;
+    border-radius: 5px;
+    color: #ffffff !important;
+}
+
+/* ─── HERO (Home) ─── */
+.hero-container {
+    background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+    color: #ffffff;
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.hero-badge {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.hero-container h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero-container p {
+    font-size: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #cbd5e1;
+}
+
+/* ─── SERVICES SECTION ─── */
+.services-section {
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-section h4 {
+    color: #3b82f6;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.services-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #0f172a;
+}
+
+.services-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.service-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon-box {
+    font-size: 32px;
+    background: #eff6ff;
+    padding: 12px;
+    border-radius: 10px;
+    min-width: 60px;
+    text-align: center;
+}
+
+/* ─── LOGIN WRAPPER ─── */
+.login-wrapper,
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    padding: 30px;
+}
+
+.login-card {
+    display: flex;
+    width: 900px;
+    max-width: 100%;
+    min-height: 480px;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.login-left {
+    flex: 1;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.login-left h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #0f172a;
+}
+
+.login-right {
+    flex: 1;
+    background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+    color: #ffffff;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-right h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.login-right p {
+    color: #cbd5e1;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* ─── FORM ELEMENTS ─── */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #334155;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    background: #ffffff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* ─── BUTTONS ─── */
+.btn-login {
+    background: #3b82f6;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    transition: background 0.2s;
+}
+
+.btn-login:hover {
+    background: #2563eb;
+}
+
+.btn {
+    display: inline-block;
+    padding: 9px 18px;
+    background: #3b82f6;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: #2563eb;
+}
+
+.btn.secondary {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.btn.secondary:hover {
+    background: #cbd5e1;
+}
+
+.btn.error {
+    background: #ef4444;
+    color: #ffffff;
+}
+
+.btn.error:hover {
+    background: #dc2626;
+}
+
+.text-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+/* ─── FORGOT PASSWORD LINK ─── */
+.forgot-link {
+    display: block;
+    text-align: right;
+    font-size: 13px;
+    color: #3b82f6;
+    text-decoration: none;
+    margin-top: -5px;
+    margin-bottom: 15px;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* ─── CONTAINERS / DASHBOARDS ─── */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.container.small-card {
+    max-width: 550px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f1f5f9;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.header h2 {
+    font-size: 20px;
+    color: #0f172a;
+}
+
+h3 {
+    margin: 20px 0 15px;
+    color: #0f172a;
+    font-size: 17px;
+}
+
+/* ─── STAT CARDS ─── */
+.stat-card {
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.stat-card .label {
+    font-size: 12px;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.stat-card .value {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.stat-blue {
+    background: #eff6ff;
+    border-left: 4px solid #3b82f6;
+}
+
+.stat-blue .value {
+    color: #1e40af;
+}
+
+.stat-yellow {
+    background: #fef3c7;
+    border-left: 4px solid #f59e0b;
+}
+
+.stat-yellow .value {
+    color: #92400e;
+}
+
+.stat-green {
+    background: #dcfce7;
+    border-left: 4px solid #16a34a;
+}
+
+.stat-green .value {
+    color: #166534;
+}
+
+.stat-red {
+    background: #fee2e2;
+    border-left: 4px solid #ef4444;
+}
+
+.stat-red .value {
+    color: #991b1b;
+}
+
+/* ─── SEARCH BAR ─── */
+.search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.search-bar input[type="text"],
+.search-bar select {
+    padding: 9px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-bar input[type="text"] {
+    flex: 2;
+    min-width: 200px;
+}
+
+.search-bar select {
+    flex: 1;
+    min-width: 150px;
+}
+
+/* ─── TABLES ─── */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: #ffffff;
+}
+
+thead {
+    background: #f8fafc;
+}
+
+th {
+    text-align: left;
+    padding: 12px 15px;
+    font-size: 12px;
+    color: #475569;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+td {
+    padding: 14px 15px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 14px;
+    color: #1e293b;
+    vertical-align: middle;
+}
+
+tr:hover {
+    background: #f8fafc;
+}
+
+/* ─── STATUS BADGE ─── */
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    background: #e0e7ff;
+    color: #3730a3;
+    text-transform: uppercase;
+}
+
+/* Status-specific colors */
+.status-badge.assigned {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.status-badge.under_review {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status-badge.completed {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-badge.rejected {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* ─── OVERDUE BADGE ─── */
+.overdue-badge {
+    display: inline-block;
+    background: #ef4444;
+    color: #ffffff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-left: 5px;
+}
+
+/* ─── NOTIFICATION BELL ─── */
+.notif-btn {
+    position: relative;
+    display: inline-block;
+    padding: 9px 18px;
+    background: #3b82f6;
+    color: #ffffff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.notif-btn:hover {
+    background: #2563eb;
+}
+
+.notif-badge {
+    display: inline-block;
+    background: #ef4444;
+    color: #ffffff;
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-left: 6px;
+    font-weight: 700;
+}
+
+/* ─── NOTIFICATIONS PAGE ─── */
+.notification-item {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background: #f8fafc;
+    border-left: 4px solid #cbd5e1;
+}
+
+.notification-item.unread {
+    background: #eff6ff;
+    border-left: 4px solid #3b82f6;
+}
+
+.notification-item .notif-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.notification-item .notif-title {
+    color: #0f172a;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.notification-item .notif-time {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+.notification-item .notif-message {
+    margin-top: 6px;
+    color: #475569;
+    font-size: 13px;
+}
+
+/* ─── REPLY BOX (Student reply shown to trainer) ─── */
+.reply-box {
+    background: #f8fafc;
+    padding: 15px;
+    border-left: 4px solid #3b82f6;
+    border-radius: 6px;
+    color: #1e293b;
+    margin-top: 8px;
+}
+
+/* ─── FORM FIELDS (Assign / Review / Upload) ─── */
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="password"],
+form input[type="date"],
+form input[type="file"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    font-family: inherit;
+    background: #ffffff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+form input[type="file"] {
+    padding: 8px;
+    background: #f8fafc;
+    cursor: pointer;
+}
+
+/* ─── MESSAGES ─── */
+.error {
+    color: #ef4444;
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    background: #fef2f2;
+    border-left: 3px solid #ef4444;
+    border-radius: 4px;
+}
+
+.success {
+    color: #16a34a;
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    background: #f0fdf4;
+    border-left: 3px solid #16a34a;
+    border-radius: 4px;
+}
+
+/* ─── EMPTY STATE ─── */
+.empty-state {
+    text-align: center;
+    color: #888;
+    padding: 30px;
+    font-style: italic;
+}
+
+/* ─── FILE PREVIEW ─── */
+.file-link {
+    display: inline-block;
+    padding: 5px 12px;
+    background: #16a34a;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.file-link:hover {
+    background: #15803d;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+    .services-grid[style*="repeat(3"] {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+    .container div[style*="repeat(4"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-card {
+        flex-direction: column;
+        height: auto;
+        min-height: auto;
+    }
+    .login-right {
+        display: none;
+    }
+    .navbar {
+        padding: 15px 20px;
+    }
+    .nav-links a {
+        margin-left: 10px;
+        font-size: 13px;
+    }
+    .hero-container {
+        padding: 50px 20px;
+    }
+    .hero-container h1 {
+        font-size: 28px;
+    }
+    .hero-container p {
+        font-size: 14px;
+    }
+    .container {
+        padding: 20px;
+        margin: 20px;
+    }
+    table {
+        font-size: 12px;
+    }
+    th, td {
+        padding: 8px 10px;
+    }
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .search-bar {
+        flex-direction: column;
+    }
+    .search-bar input[type="text"],
+    .search-bar select {
+        min-width: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .container div[style*="repeat(4"] {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+    .services-grid[style*="repeat(3"] {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+    .header h2 {
+        font-size: 16px;
+    }
+    table {
+        font-size: 11px;
+    }
+    th, td {
+        padding: 6px 8px;
+    }
+}
+
+/* ─── UTILITIES ─── */
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.mt-10 { margin-top: 10px; }
+.mt-15 { margin-top: 15px; }
+.mt-20 { margin-top: 20px; }
+.mb-10 { margin-bottom: 10px; }
+.mb-15 { margin-bottom: 15px; }
+.mb-20 { margin-bottom: 20px; }
+.flex { display: flex; }
+.flex-between { display: flex; justify-content: space-between; align-items: center; }
+.gap-10 { gap: 10px; }
